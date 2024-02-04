@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial scale=1.0">
+    <title>Car Website Design</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .info {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .info p {
+            max-width: 600px;
+            margin: 0 auto;
+            font-size: 18px;
+            line-height: 1.5;
+        }
+
+        .features-container {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .features-container p {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 18px;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+<body>
+    <div class="header" id="header">
+        <nav>
+            <img src="logo.png" class="logo">
+            <ul>
+                <li><a href="#" id="phantom">CARS</a></li>
+                <li><a href="#" id="wraith">BUSES</a></li>
+                <li><a href="#" id="dawn">JETS</a></li>
+                <li><a href="#" id="cullinan">ABOUT US</a></li>
+            </ul>
+            <a href="#" class="btn">Reserve Now</a>
+        </nav>
+
+        <div class="info">
+            <p id="featureDescription">EFFORTLESS LUXURY REDEFINED</p>
+        </div>
+    </div>
+
+    <div class="features-container">
+        <p id="featureShortDescription"></p>
+        <p id="featureLongDescription"></p>
+    </div>
+
+    <script>
+        var header = document.getElementById("header");
+        var featureDescription = document.getElementById("featureDescription");
+        var featureShortDescription = document.getElementById("featureShortDescription");
+        var featureLongDescription = document.getElementById("featureLongDescription");
+
+        var features = {
+            phantom: {
+                short: "Welcome to the Future of Automotive Excellence: Keplar Altair",
+                long: "Unveiling the Keplar Altair, where innovation and luxury converge to redefine the essence of driving. Crafted with meticulous attention to detail, the Keplar Altair stands as an epitome of automotive engineering, seamlessly blending sumptuous handcrafted interiors with cutting-edge technology. Performance Redefined: Experience a ride like never before with our powerful and refined engines, ensuring a whisper-quiet journey with an 8-gear speed for optimal performance. Unparalleled Security: Safety is paramount, and the Keplar Altair takes it to a whole new level with a bulletproof body made of tungsten carbide and titanium, coupled with bombproof construction. The missile redirection system adds an extra layer of security, making every drive worry-free. Autonomous Driving at Its Pinnacle: Embrace the future with full autopilot capabilities, self-driving features, and a comprehensive autonomous driving suite. From Auto Lane Change to Emergency Autopilot, the Keplar Altair leads the way towards a safer and smarter driving experience. Luxury Redefined: Indulge in the lap of luxury with ventilated massage seats, an auto-scent AC system, and a Bose sound system. The reconfigurable interior layout, along with an augmented reality HUD, transforms your drive into an opulent sanctuary. Tailored for You: The Keplar Altair offers exclusive customization options, allowing you to create a vehicle that reflects your unique style and preferences. The Fortified Drive: Navigate confidently with transparent-controllable windows, bulletproof tires, and a gesture-activated fragrance selection system. The Smart Drive capabilities and noiseless cabin ensure a driving experience that surpasses expectations. Autopilot Evolution: The Keplar Altair introduces the next level of autonomous driving with a full Autopilot System, Traffic-Aware Cruise Control (TACC), Autosteer, Auto Lane Change, Navigate on Autopilot, Automatic Summon, and Autopark (Full-Self Parking). This advanced suite provides an unparalleled level of convenience and safety. Keplar Altair - Beyond Boundaries: Explore the extraordinary with a car that drives itself to you on summon, featuring a distinctive self-centering logo in the wheel. From the emergency autopilot to the integrated mobile office, the Keplar Altair is not just a car; it's an embodiment of technological marvel. Welcome to the future of automotive luxury and innovation. Welcome to Keplar Altair - where driving transcends into an art form. The Future is Now. Drive Keplar Altair."
+            },
+            wraith: {
+                short: "Wraith - Unleash the power of elegance and innovation.",
+                long: "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+            },
+            dawn: {
+                short: "Dawn - Experience open-top grandeur and comfort.",
+                long: "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+            },
+            cullinan: {
+                short: "Cullinan - Effortless everywhere with ultimate versatility.",
+                long: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+            }
+        };
+
+        function updateInfo(feature) {
+            featureDescription.innerHTML = "<p>" + features[feature].short + "</p>";
+            featureShortDescription.innerHTML = "<p>" + features[feature].short + "</p>";
+            featureLongDescription.innerHTML = "<p>" + features[feature].long + "</p>";
+        }
+
+        document.getElementById("phantom").onclick = function () {
+            updateInfo("phantom");
+        };
+
+        document.getElementById("wraith").onclick = function () {
+            updateInfo("wraith");
+        };
+
+        document.getElementById("dawn").onclick = function () {
+            updateInfo("dawn");
+        };
+
+        document.getElementById("cullinan").onclick = function () {
+            updateInfo("cullinan");
+        };
+    </script>
+</body>
+</html>
